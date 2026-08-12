@@ -1,0 +1,68 @@
+.timeline {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 10px;
+  position: relative;
+  animation: fadeUp 420ms ease both;
+}
+
+.timeline__rail {
+  position: absolute;
+  left: 56px;
+  top: 8px;
+  bottom: -14px;
+  width: 2px;
+  background: color-mix(in srgb, var(--timeline) 35%, transparent);
+}
+
+.timeline__item:last-child .timeline__rail {
+  display: none;
+}
+
+.timeline__time {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding-top: 14px;
+}
+
+.timeline__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 14px 12px;
+  position: relative;
+}
+
+.timeline__card h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.timeline__card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.timeline__link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.timeline__link:hover {
+  text-decoration: underline;
+}

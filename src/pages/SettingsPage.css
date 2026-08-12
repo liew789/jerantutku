@@ -1,0 +1,45 @@
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(
+    100dvh - var(--nav-height) - env(safe-area-inset-bottom, 0px) - 16px
+  );
+  box-sizing: border-box;
+}
+
+.settings-page__body {
+  flex: 1 1 auto;
+}
+
+.settings-ath-button {
+  appearance: none;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.settings-ath-button:hover {
+  background: var(--accent-soft);
+}
+
+.settings-ath-button:active {
+  transform: translateY(1px);
+}
+
+.settings-footer {
+  margin: 0;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  opacity: 0.75;
+}

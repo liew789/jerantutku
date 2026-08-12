@@ -1,0 +1,82 @@
+import type { en } from './en'
+
+export const cn: typeof en = {
+  brand: '我的而连突',
+  tagline: '而连突 · 彭亨的家乡指南',
+  tabs: {
+    home: '首页',
+    food: '美食',
+    attractions: '景点',
+    settings: '设置',
+  },
+  home: {
+    historyTitle: '一点历史',
+    iconicTitle: '标志性地方',
+    weekendTitle: '周末行程',
+    weekendBody: '周六与周日行程——早餐、去处、午餐等安排。',
+    weekendCta: '打开周末行程',
+    tipsTitle: '访客贴士',
+  },
+  food: {
+    title: '11家必吃美食',
+    subtitle: '来自 Asia Travel Book 的而连突推荐',
+    mustTry: '必点',
+    address: '地点',
+    hours: '营业时间',
+    openMap: '在地图中打开',
+    back: '返回美食',
+    cuisine: '菜式',
+  },
+  attractions: {
+    title: '11个必去景点',
+    subtitle: '来自 Asia Travel Book 的而连突推荐',
+    whyVisit: '为什么去',
+    howToGet: '如何到达',
+    bestTime: '最佳时间',
+    openMap: '在地图中打开',
+    back: '返回景点',
+  },
+  weekend: {
+    title: '周末行程',
+    subtitle: '悠闲走遍小镇与雨林边缘',
+    saturday: '周六',
+    sunday: '周日',
+    back: '返回首页',
+    viewPlace: '查看详情',
+  },
+  settings: {
+    title: '设置',
+    language: '语言',
+    appearance: '外观',
+    light: '浅色',
+    dark: '深色',
+    aboutTitle: '关于',
+    aboutBody:
+      'JerantutKu 是而连突（彭亨）的本地指南——为居民与访客整理美食、景点与周末灵感。',
+    addToHome: '添加到主屏幕',
+    addToHomeTitle: '将 {brand} 添加到主屏幕',
+    iosHeading: 'iPhone 与 iPad',
+    iosSteps: [
+      '请用 Safari 打开本页面。',
+      '点按分享按钮。',
+      '选择“添加到主屏幕”，然后点“添加”。',
+    ],
+    androidHeading: 'Android',
+    androidSteps: [
+      '请用 Chrome 打开本页面。',
+      '打开 Chrome 菜单，选择“添加到主屏幕”。',
+      '点“添加”确认。',
+    ],
+    addToHomeClose: '返回设置',
+    langs: {
+      en: 'English',
+      bm: 'Bahasa Melayu',
+      cn: '中文',
+    },
+  },
+  common: {
+    rank: '排名',
+    notFound: '未找到',
+    goHome: '回首页',
+  },
+}

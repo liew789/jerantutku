@@ -1,0 +1,142 @@
+.home-hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  animation: fadeUp 700ms ease both;
+}
+
+.home-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+  animation: heroZoom 8s ease-out both;
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.12);
+  }
+  to {
+    transform: scale(1.04);
+  }
+}
+
+.home-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay);
+}
+
+.home-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 28px 20px 36px;
+  color: #f4f8f5;
+  max-width: 28rem;
+  animation: fadeUp 700ms ease 120ms both;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.home-hero__place {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.home-hero__content h1 {
+  font-family: var(--font-body);
+  font-size: clamp(2.6rem, 10vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variation-settings: normal;
+}
+
+.home-hero__tagline {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  opacity: 0.92;
+  max-width: 22rem;
+}
+
+.home-sections {
+  padding-top: 8px;
+}
+
+.iconic-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.iconic-strip__item {
+  margin: 0;
+  flex: 0 0 72%;
+  scroll-snap-align: start;
+}
+
+.iconic-strip__item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.iconic-strip__item figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.weekend-entrance {
+  padding: 18px;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(27, 77, 54, 0.12), transparent 55%),
+    var(--wood-soft);
+  border: 1px solid var(--border);
+}
+
+.weekend-entrance__cta {
+  margin-top: 14px;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tip-item {
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.tip-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.tip-item h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.tip-item p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}

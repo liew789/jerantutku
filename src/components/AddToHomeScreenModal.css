@@ -1,0 +1,113 @@
+.ath-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 20px 16px calc(20px + env(safe-area-inset-bottom, 0px));
+  background: rgba(12, 28, 20, 0.55);
+  backdrop-filter: blur(4px);
+  animation: pageIn 220ms ease both;
+}
+
+.ath-modal {
+  width: min(100%, 400px);
+  max-height: min(90dvh, 640px);
+  overflow: auto;
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 22px 18px;
+  box-shadow: var(--shadow);
+}
+
+.ath-modal__title {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.35;
+  margin-bottom: 22px;
+}
+
+.ath-modal__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 12px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ath-modal__divider::before,
+.ath-modal__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.ath-modal__divider span {
+  white-space: nowrap;
+}
+
+.ath-modal__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ath-modal__steps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.ath-modal__num {
+  font-weight: 800;
+  color: var(--text);
+}
+
+.ath-modal__back {
+  appearance: none;
+  width: 100%;
+  margin-top: 26px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--text);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.ath-modal__back:hover {
+  background: var(--accent-soft);
+}
+
+.ath-modal__back:active {
+  transform: translateY(1px);
+}
+
+.ath-modal__version {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}

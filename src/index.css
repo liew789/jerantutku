@@ -1,0 +1,270 @@
+@import './styles/tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(27, 77, 54, 0.12), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(138, 106, 47, 0.1), transparent 50%),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+  /* Fraunces "WONK" warps letters like J at large sizes — keep glyphs upright */
+  font-variation-settings: 'WONK' 0, 'SOFT' 0, 'opsz' 72;
+}
+
+p {
+  margin: 0;
+}
+
+.app-shell {
+  width: min(100%, 480px);
+  margin: 0 auto;
+  min-height: 100dvh;
+  position: relative;
+  background: transparent;
+}
+
+.app-content {
+  padding-bottom: calc(var(--nav-height) + env(safe-area-inset-bottom, 0px) + 16px);
+  min-height: 100dvh;
+  animation: pageIn 360ms ease both;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page {
+  padding: 20px 18px 8px;
+}
+
+.page-header {
+  margin-bottom: 18px;
+}
+
+.page-header h1 {
+  font-size: 1.85rem;
+  letter-spacing: -0.02em;
+}
+
+.page-header p {
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+.section {
+  margin-top: 28px;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+
+.section-body {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 14px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.cta-button,
+.primary-button,
+.chip-button {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button,
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #f4f8f5;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+[data-theme='dark'] .cta-button,
+[data-theme='dark'] .primary-button {
+  color: #0f1a14;
+}
+
+.cta-button:hover,
+.primary-button:hover {
+  transform: translateY(-1px);
+}
+
+.cta-button:active,
+.primary-button:active {
+  transform: translateY(0);
+}
+
+.chip-button {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.chip-button[aria-pressed='true'] {
+  background: var(--accent);
+  color: #f4f8f5;
+  border-color: transparent;
+}
+
+[data-theme='dark'] .chip-button[aria-pressed='true'] {
+  color: #0f1a14;
+}
+
+.segmented {
+  display: inline-flex;
+  gap: 6px;
+  padding: 4px;
+  background: var(--accent-soft);
+  border-radius: 999px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-hero {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+
+.meta-pill {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.detail-block {
+  margin-top: 18px;
+}
+
+.detail-block h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.detail-block p,
+.detail-block li {
+  color: var(--text-muted);
+}
+
+.detail-block ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.not-found {
+  padding: 48px 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .app-shell {
+    width: min(100%, 560px);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    background: color-mix(in srgb, var(--bg-elevated) 80%, transparent);
+  }
+}
