@@ -147,7 +147,7 @@ export const foodPlaces: FoodPlace[] = [
     description: {
       en: 'A Jerantut institution for over fifty years — fully handmade, old-school bao and dumplings you should not skip.',
       bm: 'Kedai lama Jerantut lebih 50 tahun — pau dan dumpling buatan tangan rasa lama yang wajib cuba.',
-      cn: '作为Jerantut五十多年的老字号美食，还是全手工古早味点心包点，你怎么能不来试一试呢？',
+      cn: '前身是当年赫赫有名的金喜点心，作为Jerantut五十多年的老字号美食，还是全手工古早味点心包点，你怎么能不来试一试呢？',
     },
     cuisine: {
       en: 'Dim sum / bao',
